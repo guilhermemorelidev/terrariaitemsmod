@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "terrariaitems",
+	"version": "${version}",
+	"name": "terrariaitems",
+	"description": "A mod with additions for terraria",
+	"authors": [
+		"modzinn"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/terrariaitems/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"terraria.items.Terrariaitems"
+		],
+		"client": [
+			"terraria.items.client.TerrariaitemsClient"
+		]
+	},
+	"mixins": [
+		"terrariaitems.mixins.json",
+		{
+			"config": "terrariaitems.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
